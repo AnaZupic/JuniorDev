@@ -1,0 +1,31 @@
+[
+    {
+      "naziv": "Cybersecurity",
+      "opis": "Pokazat ćemo koncepte sigurnosti na Internetu koji su u današnje vrijeme porasta tehnologije i umjetne inteligencije od izuzetnog značaja. Na radionici ćemo naučiti kako zaštiti osobne podatke te kako suzbiti i prepoznati cyber prijetnje. Naučit ćemo osnove kriptografije te kako funkcioniraju različite vrste enkripcija podataka i digitalni potpisi.",
+      "prijave_otvorene_do": "1.6.2024.",
+      "pocetak_radionice": "15.6.2024.",
+      "trajanje_radionice": 7
+    },
+    {
+      "naziv": "Razvoj web aplikacija",
+      "opis": "Naučit ćemo kreirati različite web aplikacije u React-u. Također ćemo se upoznati i s Git-om gdje ćemo upload-ati napravljene projekte.",
+      "prijave_otvorene_do": "15.6.2024.",
+      "pocetak_radionice": "1.7.2024.",
+      "trajanje_radionice": 7
+    },
+    {
+      "naziv": "Uvod u backend",
+      "opis": "Upoznat ćemo se s pojmom API-ja te s različitim bazama podataka. Naučit ćemo upravljati korisničkim sesijama te autentikacijom i autorizacijom.",
+      "prijave_otvorene_do": "1.7.2024",
+      "pocetak_radionice": "15.7.2024",
+      "trajanje_radionice": 8
+    },
+    {
+      "naziv": "Web dizajn",
+      "opis": "Naučit ćemo koristiti Figmu za planiranje dobro dizajniranog projekta te ćemo utvrditi osnovne koncepte dobrog dizajna web aplikacije.",
+      "prijave_otvorene_do": "15.7.2024",
+      "pocetak_radionice": "20.7.2024",
+      "trajanje_radionice": 3
+    }
+  ]
+  

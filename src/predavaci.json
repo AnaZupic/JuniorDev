@@ -1,0 +1,27 @@
+[
+    {
+      "ime": "Ivo Ivić",
+      "predaje": "Cybersecurity",
+      "radno_mjesto": "WeSecure d.o.o.",
+      "zavrseno_obrazovanje": "FESB u Splitu 2015. godine"
+    },
+    {
+      "ime": "Ana Anić",
+      "predaje": "Razvoj web aplikacija",
+      "radno_mjesto": "freelancer",
+      "zavrseno_obrazovanje": "FESB u Splitu 2020. godine"
+    },
+    {
+      "ime": "Josip Jović",
+      "predaje": "Uvod u backend",
+      "radno_mjesto": "CyberWorld d.o.o.",
+      "zavrseno_obrazovanje": "FER u Zagrebu 2012. godine"
+    },
+    {
+      "ime": "Marija Marić",
+      "predaje": "Web dizajn",
+      "radno_mjesto": "View d.o.o.",
+      "zavrseno_obrazovanje": "FESB 2020. godine"
+    }
+  ]
+  
