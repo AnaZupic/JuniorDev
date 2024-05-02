@@ -1,15 +1,13 @@
-// AdministracijaPage.tsx
-import React from 'react';
+import React from "react";
 
 
 const AdministracijaPage: React.FC = () => {
 
   return (
     <div>
-      <h2>Administracija</h2>
+      <h2>ADMINISTRACIJA</h2>
         <div>
-          <h3>Tablica radionica</h3>
-          {/* Implementirajte funkcionalnosti administracije ovdje */}
+          <h3>Tablica radionica (briši, dodaj) - napraviti !</h3>
         </div>
     </div>
   );

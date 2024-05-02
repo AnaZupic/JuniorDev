@@ -1,12 +1,10 @@
-// /src/App.tsx
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import HomePage from './HomePage';
-import RadionicePage from './radionice/page';
-import PredavaciPage from './predavaci/page';
-import AdministracijaPage from './administracija/page';
+import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import HomePage from "./HomePage";
+import RadionicePage from "./radionice/page";
+import PredavaciPage from "./predavaci/page";
+import AdministracijaPage from "./administracija/page";
 
 const App: React.FC = () => {
   return (

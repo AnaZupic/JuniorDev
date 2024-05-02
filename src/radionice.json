@@ -1,31 +1,58 @@
 [
-    {
+  {
       "naziv": "Cybersecurity",
       "opis": "Pokazat ćemo koncepte sigurnosti na Internetu koji su u današnje vrijeme porasta tehnologije i umjetne inteligencije od izuzetnog značaja. Na radionici ćemo naučiti kako zaštiti osobne podatke te kako suzbiti i prepoznati cyber prijetnje. Naučit ćemo osnove kriptografije te kako funkcioniraju različite vrste enkripcija podataka i digitalni potpisi.",
       "prijave_otvorene_do": "1.6.2024.",
       "pocetak_radionice": "15.6.2024.",
-      "trajanje_radionice": 7
-    },
-    {
+      "trajanje_radionice": 5
+  },
+  {
       "naziv": "Razvoj web aplikacija",
       "opis": "Naučit ćemo kreirati različite web aplikacije u React-u. Također ćemo se upoznati i s Git-om gdje ćemo upload-ati napravljene projekte.",
       "prijave_otvorene_do": "15.6.2024.",
       "pocetak_radionice": "1.7.2024.",
-      "trajanje_radionice": 7
-    },
-    {
+      "trajanje_radionice": 10
+  },
+  {
       "naziv": "Uvod u backend",
       "opis": "Upoznat ćemo se s pojmom API-ja te s različitim bazama podataka. Naučit ćemo upravljati korisničkim sesijama te autentikacijom i autorizacijom.",
       "prijave_otvorene_do": "1.7.2024",
       "pocetak_radionice": "15.7.2024",
-      "trajanje_radionice": 8
-    },
-    {
+      "trajanje_radionice": 10
+  },
+  {
+      "naziv": "Strojno učenje",
+      "opis": "Naučit ćemo temeljne koncepte, tehnike i algoritme koji se koriste za analizu i obradu podataka kako bi se donosile informirane odluke.",
+      "prijave_otvorene_do": "1.6.2024.",
+      "pocetak_radionice": "10.6.2024.",
+      "trajanje_radionice": 5
+  },
+  {
       "naziv": "Web dizajn",
       "opis": "Naučit ćemo koristiti Figmu za planiranje dobro dizajniranog projekta te ćemo utvrditi osnovne koncepte dobrog dizajna web aplikacije.",
       "prijave_otvorene_do": "15.7.2024",
       "pocetak_radionice": "20.7.2024",
-      "trajanje_radionice": 3
-    }
-  ]
-  
+      "trajanje_radionice": 5
+  },
+  {
+      "naziv": "Razvoj mobilnih aplikacija",
+      "opis": "Upoznat ćemo se s razvojem mobilnih aplikacija kroz rad s Android i iOS platformama. Naučit ćemo osnove programiranja mobilnih aplikacija te korištenje različitih alata i tehnologija za njihov razvoj.",
+      "prijave_otvorene_do": "1.8.2024",
+      "pocetak_radionice": "15.8.2024",
+      "trajanje_radionice": 10
+  },
+  {
+      "naziv": "Analiza podataka",
+      "opis": "Dublje zaronite u svijet analize podataka kroz primjenu statističkih metoda, strojnog učenja i vizualizacije podataka. Naučit ćete kako prikupiti, obraditi, analizirati i interpretirati podatke radi donošenja poslovnih odluka.",
+      "prijave_otvorene_do": "1.9.2024",
+      "pocetak_radionice": "10.9.2024",
+      "trajanje_radionice": 10
+  },
+  {
+      "naziv": "Blockchain tehnologije",
+      "opis": "Upoznajte se s osnovama blockchain tehnologije, distribuiranim knjigama transakcija i kriptovalutama. Naučit ćete o sigurnosti transakcija, pametnim ugovorima i primjenama blockchain tehnologije u različitim sektorima.",
+      "prijave_otvorene_do": "1.10.2024",
+      "pocetak_radionice": "15.10.2024",
+      "trajanje_radionice": 5
+  }
+]

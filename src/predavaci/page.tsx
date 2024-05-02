@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import '../App.css'; // Uvoz CSS datoteke
-import predavaciData from '../predavaci.json';
+import React, { useState, useEffect } from "react";
+import "../App.css"; 
+import predavaciData from "../predavaci.json";
 
 interface Predavac {
   ime: string;
@@ -17,11 +17,11 @@ const PredavaciPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="predavaci-page-container"> {/* Dodana klasa predavaci-page-container */}
-      <h2>Predavači</h2>
-      <div className="predavaci-list"> {/* Dodana klasa predavaci-list */}
+    <div className="predavaci-page-container"> 
+      <h2>PREDAVAČI</h2>
+      <div className="predavaci-list"> 
         {predavaci.map((predavac, index) => (
-          <div className="predavac-card" key={index}> {/* Dodana klasa predavac-card */}
+          <div className="predavac-card" key={index}> 
             <h3>{predavac.ime}</h3>
             <p>Predaje radionicu: {predavac.predaje}</p>
             <p>Radno mjesto: {predavac.radno_mjesto}</p>

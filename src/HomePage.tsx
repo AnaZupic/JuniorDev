@@ -1,12 +1,15 @@
-// /src/HomePage.tsx
-
-import React, { useState } from 'react';
-import './App.css'; // Import CSS file
+import React, { useState } from "react";
+import "./App.css";
 
 interface Radionica {
   id: number;
   naziv: string;
 }
+
+
+// Ovo moram promijenit... 
+// 1) izbrisati da se na Home Page-u prijavljuju radionice
+// 2) dodati da se radionice koje su se prijavile na stranici Radionice pojave pod "moje radionice" na mom profilu
 
 const radionice: Radionica[] = [
   { id: 1, naziv: 'Cybersecurity' },
