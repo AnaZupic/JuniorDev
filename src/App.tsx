@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./HomePage";
 import RadionicePage from "./radionice/page";
 import PredavaciPage from "./predavaci/page";
+import PredavacDetailsPage from "./predavaci_details/page";
 import AdministracijaPage from "./administracija/page";
 
 const App: React.FC = () => {
+  const [loggedIn, setLoggedIn] = useState(false); 
+
   return (
     <Router>
       <div>
@@ -31,9 +34,10 @@ const App: React.FC = () => {
         </header>
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/radionice" element={<RadionicePage />} />
+          <Route path="/" element={<HomePage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+          <Route path="/radionice" element={<RadionicePage loggedIn={loggedIn} />} />
           <Route path="/predavaci" element={<PredavaciPage />} />
+          <Route path="/predavac/:id" element={<PredavacDetailsPage />} />
           <Route path="/administracija" element={<AdministracijaPage />} />
         </Routes>
       </div>

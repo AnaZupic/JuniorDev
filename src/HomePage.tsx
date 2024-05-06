@@ -1,107 +1,88 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
-interface Radionica {
-  id: number;
-  naziv: string;
+interface Props {
+  loggedIn: boolean;
+  setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+const HomePage: React.FC<Props> = ({ loggedIn, setLoggedIn }) => {
+  const [uloga, setUloga] = useState<"korisnik" | "admin">("korisnik");
+  const [ime, setIme] = useState("");
+  const [lozinka, setLozinka] = useState("");
 
-// Ovo moram promijenit... 
-// 1) izbrisati da se na Home Page-u prijavljuju radionice
-// 2) dodati da se radionice koje su se prijavile na stranici Radionice pojave pod "moje radionice" na mom profilu
 
-const radionice: Radionica[] = [
-  { id: 1, naziv: 'Cybersecurity' },
-  { id: 2, naziv: 'Razvoj web aplikacija' },
-  { id: 3, naziv: 'Uvod u backend' },
-  { id: 4, naziv: 'Web dizajn' }
-];
-
-const HomePage: React.FC = () => {
-  const [uloga, setUloga] = useState<'korisnik' | 'admin'>('korisnik');
-  const [ime, setIme] = useState('');
-  const [lozinka, setLozinka] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [prijavljeneRadionice, setPrijavljeneRadionice] = useState<Radionica[]>([]);
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+      const { uloga, ime } = JSON.parse(loggedInUser);
+      setUloga(uloga);
+      setIme(ime);
+    }
+  }, []);
 
   const handlePrijava = (e: React.FormEvent) => {
     e.preventDefault();
-    if (uloga === 'admin' && lozinka === 'admin1234') {
+    if (uloga === "korisnik" && !ime) {
+      alert("Niste unijeli ime.");
+      return;
+    }
+    if (uloga === "korisnik") {
       setLoggedIn(true);
-    } else if (uloga === 'korisnik') {
+      localStorage.setItem("loggedInUser", JSON.stringify({ uloga, ime }));
+    } else if (uloga === "admin" && lozinka === "admin1234") {
       setLoggedIn(true);
+      localStorage.setItem("loggedInUser", JSON.stringify({ uloga }));
     } else {
-      alert('Pogrešna lozinka!');
+      alert("Pogrešna lozinka!");
     }
   };
 
-  const handleRadionicaPrijaviSe = (radionicaId: number) => {
-    const radionica = radionice.find(r => r.id === radionicaId);
-    if (radionica) {
-      setPrijavljeneRadionice(prevState => [...prevState, radionica]);
-    }
+  const handleOdjava = () => {
+    setLoggedIn(false);
+    localStorage.removeItem("loggedInUser");
   };
 
   return (
     <div className="container">
       <h2>EDIT Code School</h2>
-      <div className="form-container">
-        <h3>Prijava</h3>
-        <form onSubmit={handlePrijava}>
-          <label>
-            Prijava kao:
-            <select className="select" value={uloga} onChange={(e) => setUloga(e.target.value as 'korisnik' | 'admin')}>
-              <option value="korisnik">Registrirani korisnik</option>
-              <option value="admin">Admin</option>
-            </select>
-          </label>
-          {uloga === 'korisnik' && (
-            <div>
-              <label>
-                Ime i prezime:
-                <input className="input" type="text" value={ime} onChange={(e) => setIme(e.target.value)} />
-              </label>
-            </div>
-          )}
-          {uloga === 'admin' && (
-            <div>
-              <label>
-                Lozinka: admin1234
-                <input className="input" type="password" value={lozinka} onChange={(e) => setLozinka(e.target.value)} />
-              </label>
-            </div>
-          )}
-          <button className="button" type="submit">Prijavi se</button>
-        </form>
-      </div>
-      {loggedIn && uloga === 'korisnik' && (
+      {loggedIn ? (
         <div>
-          <h3>Dobrodošli, {ime}!</h3>
-          <h4>Radionice</h4>
-          <ul>
-            {radionice.map(radionica => (
-              <li key={radionica.id}>
-                {radionica.naziv}
-                <button className="button" onClick={() => handleRadionicaPrijaviSe(radionica.id)}>Prijavi se</button>
-              </li>
-            ))}
-          </ul>
+          <h3>
+            {uloga === "korisnik" ? "Dobrodošli, ${ime}!" : "Prijavljeni ste kao admin"}
+          </h3>
+          <button onClick={handleOdjava}>Odjava</button>
         </div>
-      )}
-      {loggedIn && uloga === 'admin' && (
-        <div>
-          <h3>Prijavljeni ste kao admin</h3>
-        </div>
-      )}
-      {loggedIn && uloga === 'korisnik' && (
-        <div>
-          <h4>Moje radionice</h4>
-          <ul>
-            {prijavljeneRadionice.map(radionica => (
-              <li key={radionica.id}>{radionica.naziv}</li>
-            ))}
-          </ul>
+      ) : (
+        <div className="form-container">
+          <h3>Prijavite se kako biste se mogli prijaviti na dostupne radionice.</h3>
+          <form onSubmit={handlePrijava}>
+            <label>
+              Prijava kao:
+              <select className="select" value={uloga} onChange={(e) => setUloga(e.target.value as "korisnik" | "admin"
+              )}>
+                <option value="korisnik">Registrirani korisnik</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+            {uloga === "korisnik" && (
+              <div>
+                <label>
+                  Ime i prezime:
+                  <input className="input" type="text" value={ime} onChange={(e) => setIme(e.target.value)} />
+                </label>
+              </div>
+            )}
+            {uloga === "admin" && (
+              <div>
+                <label>
+                  Lozinka: admin1234
+                  <input className="input" type="password" value={lozinka} onChange={(e) => setLozinka(e.target.value)} />
+                </label>
+              </div>
+            )}
+            <button className="button" type="submit">Prijavi se</button>
+          </form>
         </div>
       )}
     </div>

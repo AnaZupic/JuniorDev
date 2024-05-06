@@ -1,10 +1,10 @@
 body {
-  background-color: #7dbcff;
+  background-color: #809fc0;
   color: white;
 }
 
 .header {
-  background-color: #0056b3;
+  background-color: #586470;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -45,6 +45,10 @@ body {
   color: #333;
 }
 
+.nav-link.active {
+  background-color: #fff;
+  color: #333;
+}
 
 .container {
   max-width: 600px;
@@ -66,18 +70,44 @@ body {
   padding: 8px;
 }
 
+.select {
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: black; 
+  width: auto; 
+  margin: 2px 0px 40px 0px;
+}
+
 .button {
-  background-color: #007bff;
+  background-color: #0de414; 
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   cursor: pointer;
+  margin-top: 10px; 
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #10b618;
 }
+
+.form-container {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 30px; 
+  margin-bottom: 20px;
+  color: black;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 5px;
+  width: 400px;
+}
+
 
 .app-container {
   margin: auto;
@@ -90,55 +120,5 @@ body {
   color: #333;
 }
 
-.radionice-page-container {
-  margin: auto;
-  width: 80%;
-  padding: 20px;
-}
 
-.radionice-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.radionica-item {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: black;
-}
-
-.predavaci-page-container {
-  margin: auto;
-  width: 80%;
-  padding: 20px;
-}
-
-.predavaci-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.predavac-card {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 40px); 
-  margin: 20px;
-  float: left; 
-  box-sizing: border-box;
-  clear: none; 
-  color: black;
-}
-
-@media (max-width: 768px) {
-  .predavac-card {
-    width: calc(100% - 40px); 
-  }
-}
 

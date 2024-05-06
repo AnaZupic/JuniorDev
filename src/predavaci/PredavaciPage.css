@@ -1,0 +1,41 @@
+.predavaci-page-container {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.predavaci-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.predavac-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 40px); 
+    margin: 20px;
+    float: left; 
+    box-sizing: border-box;
+    clear: none; 
+    color: black;
+}
+
+#tipka-vidi-vise {
+    display: inline-block;
+    text-decoration: none;
+    color: #0056b3;
+    margin-top: 10px; 
+}
+
+#tipka-vidi-vise:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .predavac-card {
+        width: calc(100% - 40px); 
+    }
+}

@@ -3,43 +3,50 @@
     "ime": "Ivo Ivić",
     "predaje": "Cybersecurity",
     "radno_mjesto": "WeSecure d.o.o.",
-    "zavrseno_obrazovanje": "FESB u Splitu 2015. godine"
+    "zavrseno_obrazovanje": "FESB u Splitu 2015. godine",
+    "slika": "../images/IvoIvic.png"
   },
   {
     "ime": "Ana Anić",
     "predaje": "Razvoj web aplikacija",
     "radno_mjesto": "freelancer",
-    "zavrseno_obrazovanje": "FESB u Splitu 2020. godine"
+    "zavrseno_obrazovanje": "FESB u Splitu 2020. godine",
+    "slika": "../images/AnaAnic.png"
   },
   {
     "ime": "Josip Jović",
     "predaje": "Uvod u backend",
     "radno_mjesto": "CyberWorld d.o.o.",
-    "zavrseno_obrazovanje": "FER u Zagrebu 2012. godine"
+    "zavrseno_obrazovanje": "FER u Zagrebu 2012. godine",
+    "slika": "../images/JosipJovic.png"
   },
   {
     "ime": "Marija Marić",
     "predaje": "Web dizajn",
     "radno_mjesto": "View d.o.o.",
-    "zavrseno_obrazovanje": "FESB 2020. godine"
+    "zavrseno_obrazovanje": "FESB 2020. godine",
+    "slika": "../images/MarijaMaric.png"
   },
   {
     "ime": "Jure Jurić",
     "predaje": "Uvod u backend",
     "radno_mjesto": "CyberWorld d.o.o.",
-    "zavrseno_obrazovanje": "FER 2021. godine"
+    "zavrseno_obrazovanje": "FER 2021. godine",
+    "slika": "../images/JureJuric.png"
   },
   {
     "ime": "Petra Perić",
     "predaje": "Web dizajn",
     "radno_mjesto": "freelancer",
-    "zavrseno_obrazovanje": "FESB 2022. godine"
+    "zavrseno_obrazovanje": "FESB 2022. godine",
+    "slika": "../images/PetraPeric.png"
   },
   {
     "ime": "Mate Matić",
     "predaje": "Strojno učenje",
     "radno_mjesto": "FESB",
-    "zavrseno_obrazovanje": "FESB 2015. godine"
+    "zavrseno_obrazovanje": "FESB 2015. godine",
+    "slika": "../images/MateMatic.png"
   }
 
 ]

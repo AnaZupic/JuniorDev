@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../App.css"; 
+import "./RadionicePage.css";
 import radioniceData from "../radionice.json";
 
 interface Radionica {
@@ -10,10 +10,11 @@ interface Radionica {
   trajanje_radionice: number;
 }
 
-// Promijeniti:
-// 1) Da se prijavljeni korisnik može samo jednom prijaviti na jednu radionicu
+interface Props {
+  loggedIn: boolean;
+}
 
-const RadionicePage: React.FC = () => {
+const RadionicePage: React.FC<Props> = ({ loggedIn }) => {
   const [radionice, setRadionice] = useState<Radionica[]>([]);
   const [prijave, setPrijave] = useState<{ [key: string]: number }>({});
   const [filtriraniBrojPredavanja, setFiltriraniBrojPredavanja] = useState<number | null>(null);
@@ -30,9 +31,9 @@ const RadionicePage: React.FC = () => {
         ...prevPrijave,
         [nazivRadionice]: newCount,
       }));
-      // Provjera jesu li prijave dosegle 10
+
       if (newCount === 10) {
-        alert(`Radionica ${nazivRadionice} je popunjena!`);
+        alert("Radionica ${nazivRadionice} je popunjena!");
       }
     }
   };
@@ -47,26 +48,31 @@ const RadionicePage: React.FC = () => {
 
   return (
     <div className="radionice-page-container">
-      <h2>Radionice</h2>
+      <h2>RADIONICE</h2>
       <div className="filtriranje-container">
-        <label htmlFor="brojPredavanja">Filtriraj radionice po broju predavanja: </label>
-        <select id="brojPredavanja" onChange={e => handleFiltrirajPoPredavanjima(parseInt(e.target.value))}>
-          <option value="">Sva predavanja</option>
-          {[...new Set(radionice.map(radionica => radionica.trajanje_radionice))].map((brojPredavanja, index) => (
-            <option key={index} value={brojPredavanja}>{brojPredavanja}</option>
-          ))}
-        </select>
+        <div className="filtriranje-kartica">
+          <label htmlFor="brojPredavanja">Filtriraj radionice po broju predavanja: </label>
+          <select id="brojPredavanja" onChange={e => handleFiltrirajPoPredavanjima(parseInt(e.target.value))}>
+            <option value="">Sva predavanja</option>
+            {[...new Set(radionice.map(radionica => radionica.trajanje_radionice))].map((brojPredavanja, index) => (
+              <option key={index} value={brojPredavanja}>{brojPredavanja}</option>
+            ))}
+          </select>
+        </div>
       </div>
       <ul className="radionice-list">
         {filtriraneRadionice.map((radionica, index) => (
           <li key={index} className="radionica-item">
             <strong>{radionica.naziv.toUpperCase()}</strong>
             <p>{radionica.opis}</p>
-            <p>Prijave otvorene do: {radionica.prijave_otvorene_do}</p>
-            <p>Početak radionice: {radionica.pocetak_radionice}</p>
-            <p>Trajanje radionice: {radionica.trajanje_radionice} predavanja</p>
-            <button onClick={() => handlePrijaviSe(radionica.naziv)}>Prijavi se</button>
-            <p>Broj prijava: {prijave[radionica.naziv] || 0}/10</p>
+            <p><strong>Prijave otvorene do:</strong> {radionica.prijave_otvorene_do}</p>
+            <p><strong>Početak radionice:</strong> {radionica.pocetak_radionice}</p>
+            <p><strong>Trajanje radionice:</strong> {radionica.trajanje_radionice} predavanja</p>
+            {loggedIn && (
+              <button onClick={() => handlePrijaviSe(radionica.naziv)} id="tipka-prijavi-se">Prijavi se</button>
+            )}
+            <p><strong>Broj prijava:</strong> {prijave[radionica.naziv] || 0}/10</p>
+
           </li>
         ))}
       </ul>

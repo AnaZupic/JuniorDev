@@ -1,0 +1,64 @@
+.radionice-page-container {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.radionice-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.radionica-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: black;
+}
+
+#tipka-prijavi-se {
+    background-color: #43db43;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#tipka-prijavi-se {
+    background-color: #0de414;
+}
+
+#tipka-prijavi-se hover {
+  background-color: #10b618;
+}
+
+.filtriranje-container {
+    color: rgb(255, 255, 255); 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: inline-block; 
+    margin: 0 auto; 
+    font-size: 18px; 
+  }
+
+  .filtriranje-kartica {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filtriranje-kartica label {
+    margin-right: 10px;
+  }
+  
+  .filtriranje-kartica select {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #f4f4f4; 
+  }
+  
