@@ -8,12 +8,13 @@ import PredavacDetailsPage from "./predavaci_details/page";
 import AdministracijaPage from "./administracija/page";
 
 const App: React.FC = () => {
-  const [loggedIn, setLoggedIn] = useState(false); 
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <Router>
       <div>
         <header className="header">
+          <img src={'/images/logo.jpg'} alt="Logo" className="logo" />
           <h1>EDIT Code School</h1>
           <nav className="nav">
             <ul className="nav-list">
@@ -32,7 +33,6 @@ const App: React.FC = () => {
             </ul>
           </nav>
         </header>
-
         <Routes>
           <Route path="/" element={<HomePage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
           <Route path="/radionice" element={<RadionicePage loggedIn={loggedIn} />} />
@@ -42,6 +42,7 @@ const App: React.FC = () => {
         </Routes>
       </div>
     </Router>
+
   );
 }
 

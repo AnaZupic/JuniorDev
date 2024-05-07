@@ -22,8 +22,9 @@
     border-radius: 10px;
     padding: 20px;
     color: black;
-    width: 350px; 
-    margin-right: 50px; 
+    width: 450px; 
+    box-shadow: 4px 2px 8px 4px rgba(0, 0, 0, 0.3);
+    margin-right: 20px; 
   }
   
   .podaci-o-predavacu h2 {
