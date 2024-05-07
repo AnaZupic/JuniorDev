@@ -25,7 +25,7 @@ const AdministracijaPage: React.FC = () => {
   }, []);
 
   const handleIzbrisiRadionicu = (nazivRadionice: string) => {
-    const confirmDelete = window.confirm("Jeste li sigurni da želite izbrisati radionicu: ${nazivRadionice}?");
+    const confirmDelete = window.confirm(`Jeste li sigurni da želite izbrisati radionicu: ${nazivRadionice}?`);
     if (confirmDelete) {
       const updatedRadionice = radionice.filter(radionica => radionica.naziv !== nazivRadionice);
       setRadionice(updatedRadionice);

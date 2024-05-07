@@ -11,7 +11,6 @@ const HomePage: React.FC<Props> = ({ loggedIn, setLoggedIn }) => {
   const [ime, setIme] = useState("");
   const [lozinka, setLozinka] = useState("");
 
-
   useEffect(() => {
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
@@ -49,7 +48,7 @@ const HomePage: React.FC<Props> = ({ loggedIn, setLoggedIn }) => {
       {loggedIn ? (
         <div>
           <h3>
-            {uloga === "korisnik" ? "Dobrodošli, ${ime}!" : "Prijavljeni ste kao admin"}
+            {uloga === "korisnik" ? `Dobrodošli, ${ime}!` : "Prijavljeni ste kao admin"}
           </h3>
           <button onClick={handleOdjava}>Odjava</button>
         </div>
@@ -59,8 +58,7 @@ const HomePage: React.FC<Props> = ({ loggedIn, setLoggedIn }) => {
           <form onSubmit={handlePrijava}>
             <label>
               Prijava kao:
-              <select className="select" value={uloga} onChange={(e) => setUloga(e.target.value as "korisnik" | "admin"
-              )}>
+              <select className="select" value={uloga} onChange={(e) => setUloga(e.target.value as "korisnik" | "admin")}>
                 <option value="korisnik">Registrirani korisnik</option>
                 <option value="admin">Admin</option>
               </select>

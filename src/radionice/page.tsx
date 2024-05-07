@@ -24,19 +24,19 @@ const RadionicePage: React.FC<Props> = ({ loggedIn }) => {
   }, []);
 
   const handlePrijaviSe = (nazivRadionice: string) => {
-    const confirmation = window.confirm("Jeste li sigurni da se želite prijaviti na radionicu: ${nazivRadionice}?");
+    const confirmation = window.confirm(`Jeste li sigurni da se želite prijaviti na radionicu: ${nazivRadionice}?`);
     if (confirmation) {
       const newCount = (prijave[nazivRadionice] || 0) + 1;
       setPrijave(prevPrijave => ({
         ...prevPrijave,
         [nazivRadionice]: newCount,
       }));
-
+  
       if (newCount === 10) {
-        alert("Radionica ${nazivRadionice} je popunjena!");
+        alert(`Radionica ${nazivRadionice} je popunjena!`);
       }
     }
-  };
+  };  
 
   const handleFiltrirajPoPredavanjima = (brojPredavanja: number | null) => {
     setFiltriraniBrojPredavanja(brojPredavanja);
