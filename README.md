@@ -5,6 +5,7 @@ The app serves as Edit Code School's web app where users can see available works
 Link: https://junior-l2k87reqe-ana-marija-zupics-projects.vercel.app
 ## Features
 - login (user/admin)
+- viewing teachers
 - viewing workshops
 - applying for workshops
 - adding new workshops
